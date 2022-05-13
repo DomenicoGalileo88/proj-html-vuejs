@@ -4,4 +4,26 @@
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: $cube_spring_wood;
+
+    a{
+        color: $cube_shark;
+        text-decoration: none;
+    }
+
+    li{
+        list-style: none;
+    }
+
+    .btn_food{
+        color: $cube_spring_wood;
+        border-radius: 0.3rem;
+        background-color: $cube_orange;
+        border: none;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .container{
+        max-width: 1140px;
+    }
 }
