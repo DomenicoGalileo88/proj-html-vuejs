@@ -16,6 +16,9 @@ import {
   faFolder,
   faBookOpen,
   faEarthAsia,
+  faLocationDot,
+  faPhoneFlip,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -46,6 +49,9 @@ library.add(
   faComment,
   faEarthAsia,
   faPinterestP,
+  faLocationDot,
+  faPhoneFlip,
+  faEnvelope,
 );
 
 /* add font awesome icon component */
