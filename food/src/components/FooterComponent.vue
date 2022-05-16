@@ -25,10 +25,10 @@
           <div class="col links_utyls">
             <ul>
               <li><a href="#">Recipes</a></li>
-              <li><a href="#"></a>Places</li>
-              <li><a href="#"></a>Blog</li>
-              <li><a href="#"></a>About</li>
-              <li><a href="#"></a>Contact</li>
+              <li><a href="#">Places</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
             </ul>
           </div>
           <!-- /.links_utyls -->

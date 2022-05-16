@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <SiteHeader />
+    <SiteHeader :nav_links="nav_links" />
 
     <SiteMain />
 
@@ -20,6 +20,31 @@ export default {
     SiteMain,
     SiteFooter,
   },
+
+  data(){
+    return {
+      nav_links: [
+        {
+          link_name: 'Home',
+        },
+        {
+          link_name: 'Recipes',
+        },
+        {
+          link_name: 'Places',
+        },
+        {
+          link_name: 'Blog',
+        },
+        {
+          link_name: 'About',
+        },
+        {
+          link_name: 'Contact',
+        },
+      ]
+    }
+  }
 };
 </script>
 

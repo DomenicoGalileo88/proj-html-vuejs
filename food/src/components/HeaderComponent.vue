@@ -1,92 +1,86 @@
 <template>
   <header class="site_header">
-      <div class="header_top">
-        <div class="container">
-          <div class="p-3 row row-cols-2">
-            <div class="col d-flex">
-              <div class="download_app">
-                Download App <button class="ios btn_food">iOS</button>
-              </div>
-              <div class="advertise ms-4">Advertise with us</div>
+    <div class="header_top">
+      <div class="container">
+        <div class="p-3 row row-cols-2">
+          <div class="col d-flex">
+            <div class="download_app">
+              Download App <button class="ios btn_food">iOS</button>
             </div>
-            <!-- /.col -->
-            <div class="col">
-              <div class="header_icons d-flex justify-content-end">
-                <font-awesome-icon
-                  class="ms-4"
-                  icon="fa-brands fa-facebook-f"
-                />
-                <font-awesome-icon class="ms-4" icon="fa-brands fa-instagram" />
-                <font-awesome-icon class="ms-4" icon="fa-brands fa-twitter" />
-                <font-awesome-icon class="ms-4" icon="fa-brands fa-youtube" />
-              </div>
-            </div>
-            <!-- /.col -->
+            <div class="advertise ms-4">Advertise with us</div>
           </div>
-          <!-- /.row -->
+          <!-- /.col -->
+          <div class="col">
+            <div class="header_icons d-flex justify-content-end">
+              <font-awesome-icon class="ms-4" icon="fa-brands fa-facebook-f" />
+              <font-awesome-icon class="ms-4" icon="fa-brands fa-instagram" />
+              <font-awesome-icon class="ms-4" icon="fa-brands fa-twitter" />
+              <font-awesome-icon class="ms-4" icon="fa-brands fa-youtube" />
+            </div>
+          </div>
+          <!-- /.col -->
         </div>
-        <!-- /.container -->
+        <!-- /.row -->
       </div>
-      <!-- /.header_icon -->
+      <!-- /.container -->
+    </div>
+    <!-- /.header_icon -->
 
-      <div class="header_logo text-center">
-        <img src="@/assets/img/avada-food-logo.png" alt="logo" />
+    <div class="header_logo text-center">
+      <img src="@/assets/img/avada-food-logo.png" alt="logo" />
+    </div>
+    <!-- /.header_logo -->
+
+    <nav class="navbar_food">
+      <div class="container">
+        <ul class="d-flex justify-content-center mt-4">
+          <li v-for="(link, index) in nav_links"
+          :key="index">
+            <a href="#">{{ link.link_name }}</a>
+          </li>
+          <li><a href="#"><font-awesome-icon icon="fa-solid fa-magnifying-glass" /></a></li>
+        </ul>
+        
       </div>
-      <!-- /.header_logo -->
+    </nav>
+    <!-- /.navbar_food -->
 
-      <nav class="navbar_food">
-        <div class="container">
-          <ul class="d-flex justify-content-center mt-4">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Recipes</a></li>
-            <li><a href="#">Places</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li>
-              <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <!-- /.navbar_food -->
-
-      <div class="demos">
-        <div class="avada">
-          <a href="#">
-            <img
-              height="10"
-              src="@/assets/img/avada-logo.svg"
-              alt="avada-logo"
-            />
-          </a>
-        </div>
-        <div class="demos_title">Demos</div>
+    <div class="demos">
+      <div class="avada">
+        <a href="#">
+          <img height="10" src="@/assets/img/avada-logo.svg" alt="avada-logo" />
+        </a>
       </div>
-      <!-- /.domos -->
+      <div class="demos_title">Demos</div>
+    </div>
+    <!-- /.domos -->
 
-      <div class="sale">
-        <div class="price"><small>$</small>39</div>
-        <div class="sale_title">On sale</div>
-      </div>
-      <!-- /.sale -->
+    <div class="sale">
+      <div class="price"><small>$</small>39</div>
+      <div class="sale_title">On sale</div>
+    </div>
+    <!-- /.sale -->
 
-      <div class="header_jumbotron">
-        <div class="title_jumbo">
-          <button class="btn_food btn_jumbo">TODAY'S PICK</button>
-          <h1>Food Corner: Top Japanese Restaurants for Sushi</h1>
-          <div class="date">March 25, 2019</div>
-        </div>
+    <div class="header_jumbotron">
+      <div class="title_jumbo">
+        <button class="btn_food btn_jumbo">TODAY'S PICK</button>
+        <h1>Food Corner: Top Japanese Restaurants for Sushi</h1>
+        <div class="date">March 25, 2019</div>
       </div>
-      <!-- /.header_jumbotron -->
-    </header>
-    <!-- /.site_header -->
+    </div>
+    <!-- /.header_jumbotron -->
+  </header>
+  <!-- /.site_header -->
 </template>
 
 <script>
 export default {
-    name: 'SiteHeader',
-}
+  name: "SiteHeader",
+
+  props: {
+    nav_links: Object,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
