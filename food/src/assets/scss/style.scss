@@ -4,10 +4,12 @@
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: $cube_spring_wood;
-
+    background-color: $median_cararra;
+    color: $median_cape_cod;
+    font-family: 'Vidaloka',
+        sans-serif;
     a{
-        color: $cube_shark;
+        color: $median_cape_cod;
         text-decoration: none;
     }
 
@@ -25,5 +27,21 @@
 
     .container{
         max-width: 1140px;
+    }
+
+    .card{background-color: white;
+    }
+
+    .mb_4{
+        margin-bottom: 4rem;
+    }
+
+    .mt_5{
+        margin-top: 5rem;
+    }
+
+    .my_2{
+        margin-bottom: 2rem;
+        margin-top: 2rem;
     }
 }

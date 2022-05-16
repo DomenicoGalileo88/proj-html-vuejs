@@ -1,6 +1,10 @@
 import Vue from "vue";
 import App from "./App.vue";
 
+import "@fontsource/vidaloka";
+import "@fontsource/vidaloka/400.css";
+
+
 /* Font Awesome icons*/
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -10,10 +14,21 @@ import {
   faUserSecret,
   faMagnifyingGlass,
   faFolder,
-  
+  faBookOpen,
+  faEarthAsia,
 } from "@fortawesome/free-solid-svg-icons";
 
-import { faFacebookF, faInstagram, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import {
+  faComment,
+} from "@fortawesome/free-regular-svg-icons";
+
+import {
+  faFacebookF,
+  faInstagram,
+  faTwitter,
+  faYoutube,
+  faPinterestP,
+} from "@fortawesome/free-brands-svg-icons";
 
 /* import font awesome icon component */
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -27,6 +42,10 @@ library.add(
   faTwitter,
   faYoutube,
   faFolder,
+  faBookOpen,
+  faComment,
+  faEarthAsia,
+  faPinterestP,
 );
 
 /* add font awesome icon component */
