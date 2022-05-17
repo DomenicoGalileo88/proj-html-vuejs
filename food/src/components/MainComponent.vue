@@ -52,7 +52,9 @@
       <!-- /.foodie_journal -->
 
       <section class="popular_recipes">
-        <h5 class="text-center title_popular_recipes mt_5 font_serif">POPULAR RECIPES</h5>
+        <h5 class="text-center title_popular_recipes mt_5 font_serif">
+          POPULAR RECIPES
+        </h5>
         <div
           class="
             subtitle_popular_recipes
@@ -320,7 +322,9 @@
                     Food Corner: Top Japanase Restaurants for Sushi
                   </h5>
                 </a>
-                <div class="main_date font_serif">By admin | March 25th, 2019</div>
+                <div class="main_date font_serif">
+                  By admin | March 25th, 2019
+                </div>
                 <hr />
                 <p class="card-text font_serif">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -664,6 +668,7 @@ export default {
 <style lang="scss" scoped>
 main {
   .card-title {
+    transition: all 0.8s;
     &:hover {
       color: $cube_orange;
     }
@@ -718,6 +723,8 @@ main {
       }
     }
     .subtitle {
+      transition: all 0.8s;
+
       &:hover {
         color: $cube_orange;
       }
@@ -774,6 +781,7 @@ main {
     .title_img_culinary_collection {
       padding-top: 1rem;
       padding-bottom: 0.5rem;
+      transition: all 0.6s;
       &:hover {
         background-color: $cube_orange;
         color: white;
@@ -896,6 +904,10 @@ main {
         margin-left: 1rem;
         .title_circle {
           font-size: 1rem;
+          transition: all 0.8s;
+          &:hover {
+            color: $cube_orange;
+          }
         }
         .date_circle {
           font-size: 0.8rem;

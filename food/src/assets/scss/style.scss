@@ -23,7 +23,21 @@
   }
 
   .content {
+    
     &:hover .hidden {
+        animation: scale_out 0.7s linear;
+
+      @keyframes scale_out {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1);
+        }
+        100%{
+          transform: scale(1);
+        }
+      }
       visibility: visible;
     }
 
@@ -63,6 +77,7 @@
     border: none;
     padding: 0.3rem 0.7rem;
     font-family: sans-serif;
+    transition: all 0.8s;
     &:hover {
       filter: brightness(0.8);
     }

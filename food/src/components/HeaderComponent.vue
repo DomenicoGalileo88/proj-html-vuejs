@@ -13,10 +13,18 @@
           <!-- /.col -->
           <div class="col">
             <div class="header_icons d-flex justify-content-end">
-              <a href="#"><font-awesome-icon class="ms-4" icon="fa-brands fa-facebook-f" /></a>
-              <a href="#"><font-awesome-icon class="ms-4" icon="fa-brands fa-instagram" /></a>
-              <a href="#"><font-awesome-icon class="ms-4" icon="fa-brands fa-twitter" /></a>
-              <a href="#"><font-awesome-icon class="ms-4" icon="fa-brands fa-youtube" /></a>
+              <a href="#"
+                ><font-awesome-icon class="ms-4" icon="fa-brands fa-facebook-f"
+              /></a>
+              <a href="#"
+                ><font-awesome-icon class="ms-4" icon="fa-brands fa-instagram"
+              /></a>
+              <a href="#"
+                ><font-awesome-icon class="ms-4" icon="fa-brands fa-twitter"
+              /></a>
+              <a href="#"
+                ><font-awesome-icon class="ms-4" icon="fa-brands fa-youtube"
+              /></a>
             </div>
           </div>
           <!-- /.col -->
@@ -74,27 +82,29 @@ export default {
 header {
   .header_top {
     color: $cube_nevada;
-    font-size: 10px;
+    font-size: 12px;
     font-family: sans-serif;
     .download {
+      transition: all 0.8s;
       &:hover {
         color: $cube_orange;
       }
     }
-      .advertise {
+    .advertise {
+      transition: all 0.8s;
+      &:hover {
+        color: $cube_orange;
+      }
+    }
+    .header_icons {
+      .ms-4 {
+        padding: 1rem;
+        border-radius: 0.3rem;
         &:hover {
-          color: $cube_orange;
+          background-color: white;
         }
       }
-      .header_icons{
-        .ms-4{
-          padding: 1rem;
-          border-radius: 0.3rem;
-          &:hover{
-            background-color: white;
-          }
-        }
-      }
+    }
   }
 
   nav {
@@ -114,8 +124,9 @@ header {
   }
 
   .header_jumbotron {
-    h1{
-      &:hover{
+    h1 {
+      transition: all 0.8s;
+      &:hover {
         color: $cube_orange;
       }
     }
@@ -134,7 +145,8 @@ header {
       width: 40%;
       background-color: white;
       border-radius: 0.5rem;
-      &:hover{
+      transition: all 0.8s;
+      &:hover {
         color: $cube_orange;
       }
       .btn_jumbo {
