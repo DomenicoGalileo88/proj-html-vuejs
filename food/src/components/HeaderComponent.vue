@@ -5,9 +5,13 @@
         <div class="p-3 row row-cols-2">
           <div class="col d-flex align-items-center">
             <div class="download_app d-flex align-items-center">
-              <div class="download me-2">Download App</div>
+              <a href="#">
+                <div class="download me-2">Download App</div>
+              </a>
               <button class="ios btn_food">IOS</button>
-              <div class="advertise ms-4">Advertise with us</div>
+              <a href="#">
+                <div class="advertise ms-4">Advertise with us</div>
+              </a>
             </div>
           </div>
           <!-- /.col -->
