@@ -3,11 +3,12 @@
     <div class="header_top">
       <div class="container">
         <div class="p-3 row row-cols-2">
-          <div class="col d-flex">
-            <div class="download_app">
-              Download App <button class="ios btn_food">iOS</button>
+          <div class="col d-flex align-items-center">
+            <div class="download_app d-flex align-items-center">
+              <div class="download me-2">Download App</div>
+              <button class="ios btn_food">IOS</button>
+              <div class="advertise ms-4">Advertise with us</div>
             </div>
-            <div class="advertise ms-4">Advertise with us</div>
           </div>
           <!-- /.col -->
           <div class="col">
@@ -34,32 +35,18 @@
     <nav class="navbar_food">
       <div class="container">
         <ul class="d-flex justify-content-center mt-4">
-          <li v-for="(link, index) in nav_links"
-          :key="index">
+          <li v-for="(link, index) in nav_links" :key="index">
             <a href="#">{{ link.link_name }}</a>
           </li>
-          <li><a href="#"><font-awesome-icon icon="fa-solid fa-magnifying-glass" /></a></li>
+          <li>
+            <a href="#"
+              ><font-awesome-icon icon="fa-solid fa-magnifying-glass"
+            /></a>
+          </li>
         </ul>
-        
       </div>
     </nav>
     <!-- /.navbar_food -->
-
-    <div class="demos">
-      <div class="avada">
-        <a href="#">
-          <img height="10" src="@/assets/img/avada-logo.svg" alt="avada-logo" />
-        </a>
-      </div>
-      <div class="demos_title">Demos</div>
-    </div>
-    <!-- /.domos -->
-
-    <div class="sale">
-      <div class="price"><small>$</small>39</div>
-      <div class="sale_title">On sale</div>
-    </div>
-    <!-- /.sale -->
 
     <div class="header_jumbotron">
       <div class="title_jumbo">
@@ -88,6 +75,25 @@ header {
   .header_top {
     color: $cube_nevada;
     font-size: 10px;
+    .download {
+      &:hover {
+        color: $cube_orange;
+      }
+    }
+      .advertise {
+        &:hover {
+          color: $cube_orange;
+        }
+      }
+      .header_icons{
+        .ms-4{
+          padding: 1rem;
+          border-radius: 0.3rem;
+          &:hover{
+            background-color: white;
+          }
+        }
+      }
   }
 
   nav {
@@ -121,6 +127,9 @@ header {
       width: 40%;
       background-color: white;
       border-radius: 0.5rem;
+      &:hover{
+        color: $cube_orange;
+      }
       .btn_jumbo {
         position: absolute;
         top: 0%;
@@ -128,55 +137,6 @@ header {
         transform: translate(-50%, -50%);
         box-shadow: 0 0 11px 2px $cube_silver_chalice;
       }
-    }
-  }
-
-  .demos,
-  .sale {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    border-radius: 0.3rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-    color: $median_cape_cod;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 11px 2px $cube_silver_chalice;
-  }
-
-  .demos {
-    top: 38%;
-    right: 1%;
-    .avada {
-      text-align: center;
-      width: 30px;
-      height: 25px;
-      background-color: $median_cape_cod;
-      border-radius: 0.3rem;
-      padding: 0.3rem;
-      font-size: 0.5rem;
-      img {
-        filter: grayscale(1);
-      }
-    }
-
-    .demos_title {
-      font-size: 0.7rem;
-    }
-  }
-
-  .sale {
-    top: 51%;
-    right: 1%;
-    font-size: 0.6rem;
-    .price {
-      font-size: 0.9rem;
-      color: $cube_forest_green;
-      font-weight: bold;
     }
   }
 }

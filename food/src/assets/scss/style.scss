@@ -4,7 +4,7 @@
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: $median_cararra;
+    background-color: #FFFFFF;
     color: $median_cape_cod;
     font-family: 'Vidaloka',
         sans-serif;
@@ -18,11 +18,14 @@
     }
 
     .btn_food{
-        color: $cube_spring_wood;
+        color: white;
         border-radius: 0.3rem;
         background-color: $cube_orange;
         border: none;
         padding: 0.3rem 0.7rem;
+        &:hover{
+            filter: brightness(0.8);
+        }
     }
 
     .container{

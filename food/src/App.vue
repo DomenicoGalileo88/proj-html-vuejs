@@ -4,7 +4,7 @@
 
     <SiteMain />
 
-    <SiteFooter />
+    <SiteFooter :footer_links="footer_links" />
   </div>
 </template>
 
@@ -27,6 +27,24 @@ export default {
         {
           link_name: 'Home',
         },
+        {
+          link_name: 'Recipes',
+        },
+        {
+          link_name: 'Places',
+        },
+        {
+          link_name: 'Blog',
+        },
+        {
+          link_name: 'About',
+        },
+        {
+          link_name: 'Contact',
+        },
+      ],
+
+      footer_links: [
         {
           link_name: 'Recipes',
         },

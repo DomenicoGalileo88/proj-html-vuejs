@@ -24,11 +24,7 @@
           <!-- /.avada_food -->
           <div class="col links_utyls">
             <ul>
-              <li><a href="#">Recipes</a></li>
-              <li><a href="#">Places</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
+              <li v-for="(link, index) in footer_links" :key="index"><a href="#">{{link.link_name}}</a></li>
             </ul>
           </div>
           <!-- /.links_utyls -->
@@ -46,7 +42,7 @@
 
               <div class="phone d-flex mb-3">
                 <font-awesome-icon icon="fa-solid fa-phone-flip" />
-                <div class="location_text ms-4">
+                <div class="phone_text ms-4">
                   + 0100-505-0000
                 </div>
               </div>
@@ -54,7 +50,7 @@
 
               <div class="envelope d-flex">
                 <font-awesome-icon icon="fa-solid fa-envelope" />
-                <div class="location_text ms-4">
+                <div class="envelope_text ms-4">
                   info@your-domain.com
                 </div>
               </div>
@@ -89,6 +85,10 @@
 <script>
 export default {
     name: 'SiteFooter',
+
+    props: {
+      footer_links: Object,
+    }
 }
 </script>
 
@@ -110,6 +110,11 @@ footer {
     }
 
     .links_utyls {
+      a{
+        &:hover{
+          color: $cube_orange !important;
+        }
+      }
       ul {
         line-height: 2.5;
       }
@@ -140,5 +145,10 @@ footer {
     padding-top: 2rem ;
     padding-bottom: 2rem ;
   }
+    .envelope_text, .phone_text{
+      &:hover{
+        color: $cube_orange;
+      }
+    }
 }
 </style>
