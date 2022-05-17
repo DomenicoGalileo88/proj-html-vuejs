@@ -10,12 +10,41 @@
           <div><hr /></div>
         </div>
         <div class="row row-cols-3 text-center p-4">
-          <div class="col" v-for="(journal, index) in journal_contents" :key="index">
-            <img :src="journal.image" alt="" />
-            <h5 class="subtitle mt-3">
-              {{journal.title}}
-            </h5>
-            <div class="main_date">{{journal.date}}</div>
+          <div
+            class="col"
+            v-for="(journal, index) in journal_contents"
+            :key="index"
+          >
+            <div class="content text-center position-relative">
+              <a href="#">
+                <img :src="journal.image" alt="" />
+                <div
+                  class="
+                    hidden
+                    d-flex
+                    flex-column
+                    justify-content-center
+                    align-items-center
+                  "
+                >
+                  <div class="chain p-2">
+                    <font-awesome-icon icon="fa-solid fa-link" />
+                  </div>
+                  <a href="#" class="d-flex justify-content-center text-white">
+                    <div class="title_hidden_journal">
+                      {{ journal.title }}
+                    </div>
+                  </a>
+                </div>
+              </a>
+            </div>
+
+            <a href="#">
+              <h5 class="subtitle mt-3">
+                {{ journal.title }}
+              </h5>
+            </a>
+            <div class="main_date">{{ journal.date }}</div>
           </div>
         </div>
         <!-- /.row -->
@@ -41,15 +70,39 @@
         <div class="row roe-cols-2">
           <div class="col">
             <div class="card" style="width: 36rem">
-              <img
-                src="@/assets/img/Yogurt-Nan-800x527.jpg"
-                class="card-img-top"
-                alt=""
-              />
+              <div class="content text-center position-relative">
+                <a href="#">
+                  <img
+                    src="@/assets/img/Yogurt-Nan-800x527.jpg"
+                    class="card-img-top"
+                    alt=""
+                  />
+                  <div
+                    class="
+                      hidden
+                      d-flex
+                      flex-column
+                      justify-content-center
+                      align-items-center
+                    "
+                  >
+                    <div class="chain p-2">
+                      <font-awesome-icon icon="fa-solid fa-link" />
+                    </div>
+                    <a href="#" class="d-flex justify-content-center">
+                      <div class="title_hidden">
+                        Lunch Favourite with Salad, Naan and Beans
+                      </div>
+                    </a>
+                  </div>
+                </a>
+              </div>
               <div class="card-body p-4">
-                <h4 class="card-title">
-                  Lunch Favourite with Salad, Naan and Beans
-                </h4>
+                <a href="#">
+                  <h4 class="card-title">
+                    Lunch Favourite with Salad, Naan and Beans
+                  </h4>
+                </a>
                 <div class="card_subtitle">
                   Bakery, Featured, Healthly, Latest Recipes, Staff Picks
                 </div>
@@ -68,19 +121,62 @@
             </div>
           </div>
           <div class="col img_popular_recipes_sx">
-            <img
-              :src="image.image"
-              alt=""
-              v-for="(image, index) in popular_recipes_images_sx" :key="index"
-            />
+            <div
+              v-for="(image, index) in popular_recipes_images_sx"
+              :key="index"
+              class="content text-center position-relative"
+            >
+              <a href="#">
+                <img :src="image.image" alt="" />
+                <div
+                  class="
+                    hidden
+                    d-flex
+                    flex-column
+                    justify-content-center
+                    align-items-center
+                  "
+                >
+                  <div class="chain p-2">
+                    <font-awesome-icon icon="fa-solid fa-link" />
+                  </div>
+                  <div class="title_hidden">
+                    {{ image.title }}
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
+          <!-- /.img_popular_recipes_sx -->
+
           <div class="col img_popular_recipes_dx">
-            <img
-            v-for="(img, i) in popular_recipes_images_dx" :key="i"
-              :src="img.image"
-              alt=""
-            />
+            <div
+              v-for="(image, index) in popular_recipes_images_dx"
+              :key="index"
+              class="content text-center position-relative"
+            >
+              <a href="#">
+                <img :src="image.image" alt="" />
+                <div
+                  class="
+                    hidden
+                    d-flex
+                    flex-column
+                    justify-content-center
+                    align-items-center
+                  "
+                >
+                  <div class="chain p-2">
+                    <font-awesome-icon icon="fa-solid fa-link" />
+                  </div>
+                  <div class="title_hidden">
+                    {{ image.title }}
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
+          <!-- /.img_popular_recipes_dx -->
         </div>
         <!-- /.row -->
       </section>
@@ -108,49 +204,65 @@
           <div class="col">
             <div class="img_culinary_collection">
               <img src="@/assets/img/drinks-recipes.png" alt="drinks" />
-              <div class="title_img_culinary_collection">DRINKS</div>
+              <a href="#">
+                <div class="title_img_culinary_collection">DRINKS</div>
+              </a>
             </div>
           </div>
           <div class="col">
             <div class="img_culinary_collection">
               <img src="@/assets/img/soups-recipes.png" alt="soups" />
-              <div class="title_img_culinary_collection">SOUPS</div>
+              <a href="#">
+                <div class="title_img_culinary_collection">SOUPS</div>
+              </a>
             </div>
           </div>
           <div class="col">
             <div class="img_culinary_collection">
               <img src="@/assets/img/baking-recipes.png" alt="bakery" />
-              <div class="title_img_culinary_collection">BAKERY</div>
+              <a href="#">
+                <div class="title_img_culinary_collection">BAKERY</div>
+              </a>
             </div>
           </div>
           <div class="col">
             <div class="img_culinary_collection">
               <img src="@/assets/img/dinner-recipes.png" alt="dinner" />
-              <div class="title_img_culinary_collection">DINNER</div>
+              <a href="#">
+                <div class="title_img_culinary_collection">DINNER</div>
+              </a>
             </div>
           </div>
           <div class="col">
             <div class="img_culinary_collection">
               <img src="@/assets/img/healthy-recipes.png" alt="healthy" />
-              <div class="title_img_culinary_collection">HEALTHY</div>
+              <a href="#">
+                <div class="title_img_culinary_collection">HEALTHY</div>
+              </a>
             </div>
           </div>
           <div class="col">
             <div class="img_culinary_collection">
               <img src="@/assets/img/staff-picks.png" alt="staff picks" />
-              <div class="title_img_culinary_collection">STAFF PICKS</div>
+              <a href="#">
+                <div class="title_img_culinary_collection">STAFF PICKS</div>
+              </a>
             </div>
           </div>
           <div class="col">
             <div class="img_culinary_collection">
               <img src="@/assets/img/premium-recipes.png" alt="appetisers" />
-              <div class="title_img_culinary_collection">APPETISERS</div>
+              <a href="#">
+                <div class="title_img_culinary_collection">APPETISERS</div>
+              </a>
             </div>
           </div>
           <div class="col">
             <div class="img_culinary_collection">
               <img src="@/assets/img/quick-easy-recipes.png" alt="quick easy" />
-              <div class="title_img_culinary_collection">QUICK & EASY</div>
+              <a href="#">
+                <div class="title_img_culinary_collection">QUICK & EASY</div>
+              </a>
             </div>
           </div>
         </div>
@@ -172,15 +284,42 @@
         <div class="row">
           <div class="col-8">
             <div class="card card_max" style="width: 100%">
-              <img
-                src="@/assets/img/single-post-img3-1200x790.jpg"
-                class="card-img-top"
-                alt="food corner"
-              />
+              <div class="content position-relative text-center">
+                <a href="#">
+                  <img
+                    src="@/assets/img/single-post-img3-1200x790.jpg"
+                    class="card-img-top"
+                    alt="food corner"
+                  />
+                  <div
+                    class="
+                      hidden
+                      d-flex
+                      flex-column
+                      justify-content-center
+                      align-items-center
+                    "
+                  >
+                    <div class="chain p-2">
+                      <font-awesome-icon icon="fa-solid fa-link" />
+                    </div>
+                    <a
+                      href="#"
+                      class="d-flex justify-content-center text-white"
+                    >
+                      <div class="title_hidden">
+                        Food Corner: Top Japanase Restaurants for Sushi
+                      </div>
+                    </a>
+                  </div>
+                </a>
+              </div>
               <div class="card-body p-4">
-                <h5 class="card-title">
-                  Food Corner: Top Japanase Restaurants for Sushi
-                </h5>
+                <a href="#">
+                  <h5 class="card-title">
+                    Food Corner: Top Japanase Restaurants for Sushi
+                  </h5>
+                </a>
                 <div class="main_date">By admin | March 25th, 2019</div>
                 <hr />
                 <p class="card-text">
@@ -200,24 +339,44 @@
             <!-- /.card -->
 
             <div class="row">
-              <div class="col-6" v-for="(card, i) in farm_to_table_cards" :key="i">
+              <div
+                class="col-6"
+                v-for="(card, i) in farm_to_table_cards"
+                :key="i"
+              >
                 <div class="card">
-                  <img
-                   :src="card.img"
-                    class="card-img-top"
-                    alt=""
-                  />
+                  <div class="content position-relative text-center">
+                    <a href="#">
+                      <img :src="card.img" class="card-img-top" alt="" />
+                    </a>
+                    <div
+                      class="
+                        hidden
+                        d-flex
+                        flex-column
+                        justify-content-center
+                        align-items-center
+                      "
+                    >
+                      <div class="chain p-2">
+                        <font-awesome-icon icon="fa-solid fa-link" />
+                      </div>
+                      <div class="title_hidden">
+                        {{ card.title }}
+                      </div>
+                    </div>
+                  </div>
                   <div class="card-body">
                     <h5 class="card-title">
-                      {{card.title}}
+                      {{ card.title }}
                     </h5>
-                    <div class="main_date">{{card.date}}</div>
+                    <div class="main_date">{{ card.date }}</div>
                   </div>
+
+                  <!-- /.card -->
                 </div>
-                <!-- /.card -->
               </div>
               <!-- /.col-6 -->
-              
 
               <div class="load">
                 <div>LOAD MORE POSTS</div>
@@ -246,7 +405,7 @@
                 alt="singapore"
               />
               <div class="city_guide">City Guide: Singapore</div>
-              <button class="view_singapore">
+              <button class="btn_food rounded-0 view_singapore">
                 <font-awesome-icon icon="fa-solid fa-earth-asia" /> VIEW ALL
                 CITY GUIDES
               </button>
@@ -286,18 +445,24 @@
             </div>
             <!-- /.follow_us -->
             <div class="popular_recent d-flex">
-              <div class="popular">Popular</div>
-              <div class="recent">Recent</div>
+              <a href="#">
+                <div class="popular">Popular</div>
+              </a>
+              <a href="#">
+                <div class="recent">Recent</div>
+              </a>
             </div>
             <!-- /.popular_recent -->
 
             <div class="img_circle">
               <div class="circle">
-                <img
-                  class="rounded-circle"
-                  src="@/assets/img/single-post-img3-66x66.jpg"
-                  alt="food"
-                />
+                <a href="#">
+                  <img
+                    class="rounded-circle"
+                    src="@/assets/img/single-post-img3-66x66.jpg"
+                    alt="food"
+                  />
+                </a>
                 <div class="text_circle">
                   <div class="title_circle">
                     Food Corner: Top Japanese Restaurant for Sushi
@@ -306,22 +471,26 @@
                 </div>
               </div>
               <div class="circle">
-                <img
-                  class="rounded-circle"
-                  src="@/assets/img/singapore-featured-image-66x66.jpg"
-                  alt="city"
-                />
+                <a href="#">
+                  <img
+                    class="rounded-circle"
+                    src="@/assets/img/singapore-featured-image-66x66.jpg"
+                    alt="city"
+                  />
+                </a>
                 <div class="text_circle">
                   <div class="title_circle">City Guide: Singapore</div>
                   <div class="date_circle">February 27th, 2019</div>
                 </div>
               </div>
               <div class="circle">
-                <img
-                  class="rounded-circle"
-                  src="@/assets/img/slide1-bg-66x66.jpg"
-                  alt="nutritional"
-                />
+                <a href="#">
+                  <img
+                    class="rounded-circle"
+                    src="@/assets/img/slide1-bg-66x66.jpg"
+                    alt="nutritional"
+                  />
+                </a>
                 <div class="text_circle">
                   <div class="title_circle">
                     6 Nutritional Tips ti Help Burn Body Fat
@@ -442,8 +611,32 @@
       </div>
 
       <div class="row row-cols-4 g-0">
-        <div class="col" v-for="(image, index) in subscribe_images" :key="index">
-          <img :src="image.img" alt="" />
+        <div
+          class="col"
+          v-for="(image, index) in subscribe_images"
+          :key="index"
+        >
+          <div class="content text-center position-relative">
+            <a href="#">
+              <img :src="image.img" alt="" />
+              <div
+                class="
+                  hidden
+                  d-flex
+                  flex-column
+                  justify-content-center
+                  align-items-center
+                "
+              >
+                <div class="chain p-2">
+                  <font-awesome-icon icon="fa-solid fa-link" />
+                </div>
+                <div class="title_hidden">
+                  {{ image.title }}
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
         <!-- /.col -->
       </div>
@@ -464,7 +657,7 @@ export default {
     popular_recipes_images_dx: Array,
     farm_to_table_cards: Array,
     subscribe_images: Array,
-  }
+  },
 };
 </script>
 
@@ -486,10 +679,38 @@ main {
   }
 
   .foodie_journal {
-    background-color:white;
+    background-color: white;
     box-shadow: 0 0 5px $cube_silver_chalice;
     position: relative;
     bottom: 80px;
+    .content {
+      &:hover .hidden {
+        visibility: visible;
+      }
+      .hidden {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: linear-gradient(
+          rgba(252, 37, 37, 0.826),
+          rgba(252, 117, 37, 1)
+        );
+        visibility: hidden;
+        color: white;
+        .chain {
+          background-color: white;
+          border-radius: 50%;
+          color: rgba(252, 117, 37, 1);
+        }
+        .title_hidden_journal {
+          width: 70%;
+          margin-top: 1rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
     .title_journal {
       hr {
         width: 400px;
@@ -511,6 +732,13 @@ main {
 
     .card {
       background-color: $cube_spring_wood;
+      .content {
+        &:hover .title_hidden {
+          color: white;
+          text-align: center;
+          font-size: 1.2rem !important;
+        }
+      }
     }
 
     .card-text {
@@ -519,7 +747,7 @@ main {
 
     .img_popular_recipes_sx,
     .img_popular_recipes_dx {
-      img {
+      .content {
         margin-bottom: 2rem;
       }
     }
@@ -543,10 +771,10 @@ main {
       }
     }
 
-    .title_img_culinary_collection{
+    .title_img_culinary_collection {
       padding-top: 1rem;
       padding-bottom: 0.5rem;
-      &:hover{
+      &:hover {
         background-color: $cube_orange;
         color: white;
       }
@@ -554,6 +782,12 @@ main {
   }
 
   .farm_to_table {
+    .title_hidden {
+      width: 70%;
+      margin-top: 1rem;
+      font-size: 1.2rem !important;
+    }
+
     .subtitle_farm_to_table,
     .card-text,
     .read {
@@ -606,8 +840,9 @@ main {
 
     .card_max {
       margin-bottom: 2rem;
-      .more, .comment{
-        &:hover{
+      .more,
+      .comment {
+        &:hover {
           color: $cube_orange;
         }
       }
@@ -696,8 +931,8 @@ main {
         color: $cube_nevada;
       }
 
-      .card_logo{
-        &:hover{
+      .card_logo {
+        &:hover {
           background-color: #afafaf26;
         }
       }
@@ -712,7 +947,7 @@ main {
       display: flex;
       justify-content: center;
       align-items: center;
-      &:hover{
+      &:hover {
         background-color: $cube_nevada;
         color: white;
       }
@@ -723,6 +958,13 @@ main {
     background-image: url("https://avada.theme-fusion.com/food/wp-content/uploads/sites/118/2019/03/subscribe-sec-bg.png");
     background-repeat: no-repeat;
     background-size: contain;
+
+    .title_hidden {
+      width: 70%;
+      margin-top: 1rem;
+      font-size: 1.2rem !important;
+    }
+
     .text_subscribe {
       margin-top: 4rem;
       padding-top: 5rem;
@@ -748,7 +990,7 @@ main {
         width: 30%;
         border-radius: 0.3rem;
         border: 1px solid transparent;
-        &:hover{
+        &:hover {
           border: 1px solid $cube_orange;
         }
         &:focus-visible {

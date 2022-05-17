@@ -13,10 +13,10 @@
           <!-- /.col -->
           <div class="col">
             <div class="header_icons d-flex justify-content-end">
-              <font-awesome-icon class="ms-4" icon="fa-brands fa-facebook-f" />
-              <font-awesome-icon class="ms-4" icon="fa-brands fa-instagram" />
-              <font-awesome-icon class="ms-4" icon="fa-brands fa-twitter" />
-              <font-awesome-icon class="ms-4" icon="fa-brands fa-youtube" />
+              <a href="#"><font-awesome-icon class="ms-4" icon="fa-brands fa-facebook-f" /></a>
+              <a href="#"><font-awesome-icon class="ms-4" icon="fa-brands fa-instagram" /></a>
+              <a href="#"><font-awesome-icon class="ms-4" icon="fa-brands fa-twitter" /></a>
+              <a href="#"><font-awesome-icon class="ms-4" icon="fa-brands fa-youtube" /></a>
             </div>
           </div>
           <!-- /.col -->
@@ -28,7 +28,7 @@
     <!-- /.header_icon -->
 
     <div class="header_logo text-center">
-      <img src="@/assets/img/avada-food-logo.png" alt="logo" />
+      <a href="#"><img src="@/assets/img/avada-food-logo.png" alt="logo" /></a>
     </div>
     <!-- /.header_logo -->
 
@@ -51,7 +51,7 @@
     <div class="header_jumbotron">
       <div class="title_jumbo">
         <button class="btn_food btn_jumbo">TODAY'S PICK</button>
-        <h1>Food Corner: Top Japanese Restaurants for Sushi</h1>
+        <a href="#"><h1>Food Corner: Top Japanese Restaurants for Sushi</h1></a>
         <div class="date">March 25, 2019</div>
       </div>
     </div>
@@ -112,6 +112,11 @@ header {
   }
 
   .header_jumbotron {
+    h1{
+      &:hover{
+        color: $cube_orange;
+      }
+    }
     display: flex;
     justify-content: center;
     align-items: center;

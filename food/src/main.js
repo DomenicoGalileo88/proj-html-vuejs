@@ -19,6 +19,7 @@ import {
   faLocationDot,
   faPhoneFlip,
   faEnvelope,
+  faLink,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -52,6 +53,7 @@ library.add(
   faLocationDot,
   faPhoneFlip,
   faEnvelope,
+  faLink,
 );
 
 /* add font awesome icon component */
