@@ -75,6 +75,7 @@ header {
   .header_top {
     color: $cube_nevada;
     font-size: 10px;
+    font-family: sans-serif;
     .download {
       &:hover {
         color: $cube_orange;
@@ -97,6 +98,7 @@ header {
   }
 
   nav {
+    font-family: sans-serif;
     li {
       margin-left: 4rem;
       font-weight: 400;

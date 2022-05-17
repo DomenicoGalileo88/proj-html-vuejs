@@ -6,7 +6,7 @@
           class="title_journal d-flex justify-content-center align-items-center"
         >
           <div><hr /></div>
-          <h4 class="m-4">FOODIE JOURNAL</h4>
+          <h4 class="m-4 font_serif">FOODIE JOURNAL</h4>
           <div><hr /></div>
         </div>
         <div class="row row-cols-3 text-center p-4">
@@ -44,7 +44,7 @@
                 {{ journal.title }}
               </h5>
             </a>
-            <div class="main_date">{{ journal.date }}</div>
+            <div class="main_date font_serif">{{ journal.date }}</div>
           </div>
         </div>
         <!-- /.row -->
@@ -52,7 +52,7 @@
       <!-- /.foodie_journal -->
 
       <section class="popular_recipes">
-        <h5 class="text-center title_popular_recipes mt_5">POPULAR RECIPES</h5>
+        <h5 class="text-center title_popular_recipes mt_5 font_serif">POPULAR RECIPES</h5>
         <div
           class="
             subtitle_popular_recipes
@@ -62,7 +62,7 @@
             mb_4
           "
         >
-          <p class="w-50">
+          <p class="w-50 font_serif">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident
             laboriosam, eaque reiciendis qui quo repudiandae ipsam
           </p>
@@ -103,11 +103,11 @@
                     Lunch Favourite with Salad, Naan and Beans
                   </h4>
                 </a>
-                <div class="card_subtitle">
+                <div class="card_subtitle font_serif">
                   Bakery, Featured, Healthly, Latest Recipes, Staff Picks
                 </div>
                 <hr />
-                <p class="card-text">
+                <p class="card-text font_serif">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
                   veniam laboriosam ullam esse nihil aliquam voluptatem maiores
                   commodi dignissimos nisi harum quibusdam officiis, iure
@@ -183,7 +183,7 @@
       <!-- /.popular_recipes -->
 
       <section class="culinary_collection">
-        <h5 class="text-center title_culinary_collection mt_5">
+        <h5 class="text-center title_culinary_collection mt_5 font_serif">
           CULINARY COLLECTION
         </h5>
         <div
@@ -195,7 +195,7 @@
             mb_4
           "
         >
-          <p class="w-50">
+          <p class="w-50 font_serif">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident
             laboriosam, eaque reiciendis qui quo repudiandae ipsam
           </p>
@@ -271,12 +271,12 @@
 
       <section class="farm_to_table">
         <div class="title_farm_to_table mt_5 d-flex justify-content-between">
-          <h5>FARM TO TABLE</h5>
+          <h5 class="font_serif">FARM TO TABLE</h5>
           <button class="btn_food px-3 py-2">
             READ OUR BLOG <font-awesome-icon icon="fa-solid fa-book-open" />
           </button>
         </div>
-        <p class="subtitle_farm_to_table mb_4 w-50">
+        <p class="subtitle_farm_to_table mb_4 w-50 font_serif">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident
           laboriosam, eaque reiciendis qui quo repudiandae ipsam
         </p>
@@ -320,9 +320,9 @@
                     Food Corner: Top Japanase Restaurants for Sushi
                   </h5>
                 </a>
-                <div class="main_date">By admin | March 25th, 2019</div>
+                <div class="main_date font_serif">By admin | March 25th, 2019</div>
                 <hr />
-                <p class="card-text">
+                <p class="card-text font_serif">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Accusamus impedit sapiente saepe eveniet, veritatis
                   voluptatum. Recusandae at, ab, soluta officia praesentium ea
@@ -370,7 +370,7 @@
                     <h5 class="card-title">
                       {{ card.title }}
                     </h5>
-                    <div class="main_date">{{ card.date }}</div>
+                    <div class="main_date font_serif">{{ card.date }}</div>
                   </div>
 
                   <!-- /.card -->
@@ -378,7 +378,7 @@
               </div>
               <!-- /.col-6 -->
 
-              <div class="load">
+              <div class="load font_serif">
                 <div>LOAD MORE POSTS</div>
               </div>
               <!-- /.load -->
@@ -592,7 +592,7 @@
           <span>&</span>
           Receive A Free eBook
         </h5>
-        <p class="subtitle_subscribe">
+        <p class="subtitle_subscribe font_serif">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam,
           architecto quaerat laudantium suscipit eum tenetur aliquam
           praesentium. Enim, non quis.
@@ -606,7 +606,7 @@
       </div>
       <!-- /.email_subscribe -->
 
-      <div class="cras text-center">
+      <div class="cras text-center font_serif">
         Cras porttitor pellentesque sem eu pretium.
       </div>
 
