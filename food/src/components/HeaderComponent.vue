@@ -65,7 +65,7 @@ export default {
   name: "SiteHeader",
 
   props: {
-    nav_links: Object,
+    nav_links: Array,
   },
 };
 </script>

@@ -87,7 +87,7 @@ export default {
     name: 'SiteFooter',
 
     props: {
-      footer_links: Object,
+      footer_links: Array,
     }
 }
 </script>
@@ -139,7 +139,7 @@ footer {
   }
 
   .footer_bottom{
-    background-color: $cube_spring_wood;
+    background-color:  #EDEDE7;
     color: $cube_nevada;
     text-align: center;
     padding-top: 2rem ;

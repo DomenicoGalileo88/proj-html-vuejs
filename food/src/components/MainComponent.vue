@@ -10,26 +10,12 @@
           <div><hr /></div>
         </div>
         <div class="row row-cols-3 text-center p-4">
-          <div class="col">
-            <img src="@/assets/img/single-post-img3-800x527.jpg" alt="" />
+          <div class="col" v-for="(journal, index) in journal_contents" :key="index">
+            <img :src="journal.image" alt="" />
             <h5 class="subtitle mt-3">
-              Food Corner: Top Japanese Restaurants for Sushi
+              {{journal.title}}
             </h5>
-            <div class="main_date">By admin March 25th, 2019</div>
-          </div>
-          <div class="col">
-            <img src="@/assets/img/fi-roundup-800x527.jpg" alt="" />
-            <h5 class="subtitle mt-3">
-              Roundup: My New Favourite Recipes For Healthly Living
-            </h5>
-            <div class="main_date">By admin March 25th, 2019</div>
-          </div>
-          <div class="col">
-            <img src="@/assets/img/fi-toasts-800x527.jpg" alt="" />
-            <h5 class="subtitle mt-3">
-              Why These Toasts with Tea are My New Favourite
-            </h5>
-            <div class="main_date">By admin March 25th, 2019</div>
+            <div class="main_date">{{journal.date}}</div>
           </div>
         </div>
         <!-- /.row -->
@@ -83,28 +69,15 @@
           </div>
           <div class="col img_popular_recipes_sx">
             <img
-              src="@/assets/img/Mixed-fruits-800x527.jpg"
-              alt="mixed fruits"
-            />
-            <img
-              src="@/assets/img/r-michelle-tsang-500721-unsplash-min-800x527.jpg"
+              :src="image.image"
               alt=""
+              v-for="(image, index) in popular_recipes_images_sx" :key="index"
             />
-            <img
-              src="@/assets/img/r-maarten-van-den-heuvel-400626-unsplash-min-460x295.jpg"
-              alt=""
-            />
-            <img src="@/assets/img/fi2x-6-460x295.jpg" alt="" />
           </div>
           <div class="col img_popular_recipes_dx">
             <img
-              src="@/assets/img/r-rachel-park-366508-unsplash-min-800x527.jpg"
-              alt="mixed fruits"
-            />
-            <img src="@/assets/img/quick-summer-drink-460x295.jpg" alt="" />
-            <img src="@/assets/img/perfect-cosmopolitan-460x295.jpg" alt="" />
-            <img
-              src="@/assets/img/r-brooke-lark-96398-unsplash-min-460x295.jpg"
+            v-for="(img, i) in popular_recipes_images_dx" :key="i"
+              :src="img.image"
               alt=""
             />
           </div>
@@ -141,43 +114,43 @@
           <div class="col">
             <div class="img_culinary_collection">
               <img src="@/assets/img/soups-recipes.png" alt="soups" />
-              <div class="title_img_culinary_collection">DRINKS</div>
+              <div class="title_img_culinary_collection">SOUPS</div>
             </div>
           </div>
           <div class="col">
             <div class="img_culinary_collection">
               <img src="@/assets/img/baking-recipes.png" alt="bakery" />
-              <div class="title_img_culinary_collection">DRINKS</div>
+              <div class="title_img_culinary_collection">BAKERY</div>
             </div>
           </div>
           <div class="col">
             <div class="img_culinary_collection">
               <img src="@/assets/img/dinner-recipes.png" alt="dinner" />
-              <div class="title_img_culinary_collection">DRINKS</div>
+              <div class="title_img_culinary_collection">DINNER</div>
             </div>
           </div>
           <div class="col">
             <div class="img_culinary_collection">
               <img src="@/assets/img/healthy-recipes.png" alt="healthy" />
-              <div class="title_img_culinary_collection">DRINKS</div>
+              <div class="title_img_culinary_collection">HEALTHY</div>
             </div>
           </div>
           <div class="col">
             <div class="img_culinary_collection">
               <img src="@/assets/img/staff-picks.png" alt="staff picks" />
-              <div class="title_img_culinary_collection">DRINKS</div>
+              <div class="title_img_culinary_collection">STAFF PICKS</div>
             </div>
           </div>
           <div class="col">
             <div class="img_culinary_collection">
               <img src="@/assets/img/premium-recipes.png" alt="appetisers" />
-              <div class="title_img_culinary_collection">DRINKS</div>
+              <div class="title_img_culinary_collection">APPETISERS</div>
             </div>
           </div>
           <div class="col">
             <div class="img_culinary_collection">
               <img src="@/assets/img/quick-easy-recipes.png" alt="quick easy" />
-              <div class="title_img_culinary_collection">DRINKS</div>
+              <div class="title_img_culinary_collection">QUICK & EASY</div>
             </div>
           </div>
         </div>
@@ -227,94 +200,24 @@
             <!-- /.card -->
 
             <div class="row">
-              <div class="col-6">
+              <div class="col-6" v-for="(card, i) in farm_to_table_cards" :key="i">
                 <div class="card">
                   <img
-                    src="@/assets/img/fi-roundup-800x527.jpg"
+                   :src="card.img"
                     class="card-img-top"
                     alt=""
                   />
                   <div class="card-body">
                     <h5 class="card-title">
-                      Roundup: My New Favourite Recipes For Heathly Living
+                      {{card.title}}
                     </h5>
-                    <div class="main_date">By admin | March 25th, 2019</div>
+                    <div class="main_date">{{card.date}}</div>
                   </div>
                 </div>
+                <!-- /.card -->
               </div>
-              <div class="col-6">
-                <div class="card">
-                  <img
-                    src="@/assets/img/fi-korean-food-800x527.jpg"
-                    class="card-img-top"
-                    alt=""
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Meal Prep: Korean Bibimbap with Kimchi
-                    </h5>
-                    <div class="main_date">By admin | March 25th, 2019</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="card">
-                  <img
-                    src="@/assets/img/fi-toasts-800x527.jpg"
-                    class="card-img-top"
-                    alt=""
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Why These Toasts with Tea are My New Favourite
-                    </h5>
-                    <div class="main_date">By admin | March 25th, 2019</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="card">
-                  <img
-                    src="@/assets/img/fi-street-food-800x527.jpg"
-                    class="card-img-top"
-                    alt=""
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Exploring Street Food in Bangkok</h5>
-                    <div class="main_date">By admin | March 25th, 2019</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="card">
-                  <img
-                    src="@/assets/img/fi-organic-breakfast-800x527.jpg"
-                    class="card-img-top"
-                    alt=""
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Organic Choices For Healthier Living
-                    </h5>
-                    <div class="main_date">By admin | March 25th, 2019</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="card">
-                  <img
-                    src="@/assets/img/fi-water-side-rest-800x527.jpg"
-                    class="card-img-top"
-                    alt=""
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      5 Waterside Reastaurants in Istanbul for Special Events
-                    </h5>
-                    <div class="main_date">By admin | March 25th, 2019</div>
-                  </div>
-                </div>
-              </div>
+              <!-- /.col-6 -->
+              
 
               <div class="load">
                 <div>LOAD MORE POSTS</div>
@@ -539,26 +442,8 @@
       </div>
 
       <div class="row row-cols-4 g-0">
-        <div class="col">
-          <img src="@/assets/img/Yogurt-Nan-800x527.jpg" alt="" />
-        </div>
-        <!-- /.col -->
-        <div class="col">
-          <img src="@/assets/img/Mixed-fruits-800x527.jpg" alt="" />
-        </div>
-        <!-- /.col -->
-        <div class="col">
-          <img
-            src="@/assets/img/r-rachel-park-366508-unsplash-min-800x527.jpg"
-            alt=""
-          />
-        </div>
-        <!-- /.col -->
-        <div class="col">
-          <img
-            src="@/assets/img/r-michelle-tsang-500721-unsplash-min-800x527.jpg"
-            alt=""
-          />
+        <div class="col" v-for="(image, index) in subscribe_images" :key="index">
+          <img :src="image.img" alt="" />
         </div>
         <!-- /.col -->
       </div>
@@ -572,6 +457,14 @@
 <script>
 export default {
   name: "SiteMain",
+
+  props: {
+    journal_contents: Array,
+    popular_recipes_images_sx: Array,
+    popular_recipes_images_dx: Array,
+    farm_to_table_cards: Array,
+    subscribe_images: Array,
+  }
 };
 </script>
 
@@ -642,7 +535,8 @@ main {
     }
 
     .img_culinary_collection {
-      background-color: $cube_spring_wood;
+      background-color: white;
+      box-shadow: 0 0 5px $cube_silver_chalice;
       padding-top: 1.5rem;
       img {
         max-width: 30%;
