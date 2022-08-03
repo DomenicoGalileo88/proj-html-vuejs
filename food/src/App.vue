@@ -9,7 +9,6 @@
       :farm_to_table_cards="farm_to_table_cards"
       :subscribe_images="subscribe_images"
     />
-
     <SiteFooter :footer_links="footer_links" />
   </div>
 </template>
